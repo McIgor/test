@@ -1,6 +1,7 @@
 var client = new System.Net.Sockets.TcpClient();
 
-await client.ConnectAsync("whois.nic.co", 43);
+//await client.ConnectAsync("whois.nic.co", 43);
+client.Connect("whois.nic.co", 43);
 
 string response;
 using (System.Net.Sockets.NetworkStream stream = client.GetStream())
