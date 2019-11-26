@@ -14,4 +14,4 @@ using (System.Net.Sockets.NetworkStream stream = client.GetStream())
     response = reader.ReadToEnd();
 }
 
-System.Console.Out.Write(response);
+System.Console.Out.Write($"Response:{response}");
