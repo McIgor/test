@@ -7,7 +7,7 @@ string response;
 using (System.Net.Sockets.NetworkStream stream = client.GetStream())
 {
     //byte[] data = System.Text.Encoding.ASCII.GetBytes($"site.biz{System.Environment.NewLine}");
-    byte[] data = System.Text.Encoding.ASCII.GetBytes($"site.biz\n");
+    byte[] data = System.Text.Encoding.ASCII.GetBytes($"site.biz\r\n");
 
     stream.Write(data, 0, data.Length);
     
