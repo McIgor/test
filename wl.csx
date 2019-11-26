@@ -6,7 +6,8 @@ client.Connect("whois.nic.co", 43);
 string response;
 using (System.Net.Sockets.NetworkStream stream = client.GetStream())
 {
-    byte[] data = System.Text.Encoding.ASCII.GetBytes($"site.co{System.Environment.NewLine}");
+    //byte[] data = System.Text.Encoding.ASCII.GetBytes($"site.co{System.Environment.NewLine}");
+    byte[] data = System.Text.Encoding.ASCII.GetBytes($"site.co\r\n");
 
     stream.Write(data, 0, data.Length);
     
