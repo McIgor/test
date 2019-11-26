@@ -6,8 +6,8 @@ await client.ConnectAsync("whois.nic.biz", 43);
 string response;
 using (System.Net.Sockets.NetworkStream stream = client.GetStream())
 {
-    byte[] data = System.Text.Encoding.ASCII.GetBytes($"site.biz{System.Environment.NewLine}");
-    //byte[] data = System.Text.Encoding.ASCII.GetBytes($"site.biz\r\n");
+    //byte[] data = System.Text.Encoding.ASCII.GetBytes($"site.biz{System.Environment.NewLine}");
+    byte[] data = System.Text.Encoding.ASCII.GetBytes($"site.biz\n");
 
     stream.Write(data, 0, data.Length);
     
