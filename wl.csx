@@ -1,13 +1,13 @@
 var client = new System.Net.Sockets.TcpClient();
 
-await client.ConnectAsync("whois.nic.co", 43);
+await client.ConnectAsync("whois.nic.biz", 43);
 //client.Connect("whois.nic.co", 43);
 
 string response;
 using (System.Net.Sockets.NetworkStream stream = client.GetStream())
 {
-    //byte[] data = System.Text.Encoding.ASCII.GetBytes($"site.co{System.Environment.NewLine}");
-    byte[] data = System.Text.Encoding.ASCII.GetBytes($"site.co\r\n");
+    byte[] data = System.Text.Encoding.ASCII.GetBytes($"site.biz{System.Environment.NewLine}");
+    //byte[] data = System.Text.Encoding.ASCII.GetBytes($"site.biz\r\n");
 
     stream.Write(data, 0, data.Length);
     
